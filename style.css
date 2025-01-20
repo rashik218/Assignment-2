@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: orange;
+  --secondery-color: #ffffff;
+  --footer-color: #01acfd;
+  --third-color: #05d4df;
+  --fourth-color: #5d58ef;
+}
+
+body {
+  font-family: "Quicksand", serif;
+  background: url(./assets/bg.png);
+}
+
+/* short class  */
+.text-gray{
+  color: rgb(85, 83, 83);
+}
+.text-light-gray {
+  color: rgb(113, 112, 112);
+}
+.btn {
+  padding: 10px 60px;
+  color: var(--secondery-color);
+  border: none;
+  border-radius: 12px;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: end;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: start;
+}
+/* shared styles  */
+.navbar,
+.hero {
+  margin: 0 auto;
+}
+
+/* header styles  */
+.navbar {
+  max-width: 1160px;
+  margin: 20px auto;
+}
+.logo h2 {
+  font-size: 2rem;
+  margin-left: 11px;
+}
+
+.nav-list ul {
+  list-style: none;
+  gap: 32px;
+}
+.nav-item a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav-item .nav-item1 {
+  color: var(--primary-color);
+}
+.nav-item .nav-item2 {
+  color: var(--footer-color);
+}
+.nav-item .nav-item3 {
+  color: var(--third-color);
+}
+.nav-item .nav-item4 {
+  color: var(--fourth-color);
+}
+.navbar .btn {
+  font-size: 1.25rem;
+  background-color: var(--primary-color);
+}
+
+.menu {
+  font-size: 2rem;
+  padding: 20px;
+  display: none;
+}
+.hero {
+  max-width: 1160px;
+}
+.hero-content {
+  max-width: 640px;
+  gap: 24px;
+}
+.hero-content h1 {
+  font-size: 3.5rem;
+}
+.hero-content h1 .first {
+  color: var(--primary-color);
+}
+.hero-content h1 .last {
+  color: var(--footer-color);
+}
+.hero-content p{
+  font-size: 1.25rem;
+}
+.hero .btn {
+  color: var(--secondery-color);
+  background-color: black;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 576px) {
+  .nav-list,
+  .logo h2,
+  .navbar button {
+    display: none;
+  }
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero-content {
+    align-items: center;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .hero-content .desc{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .hero-img img {
+    width: 336px;
+  }
+  .logo img {
+    padding: 20px;
+  }
+  .menu {
+    display: block;
+  }
+}
