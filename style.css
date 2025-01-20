@@ -26,6 +26,9 @@ body {
 .text-light-gray {
   color: rgb(113, 112, 112);
 }
+.text-center{
+  text-align: center;
+}
 .btn {
   padding: 10px 60px;
   color: var(--secondery-color);
@@ -58,7 +61,8 @@ body {
 }
 /* shared styles  */
 .navbar,
-.hero {
+.hero,
+.curriculum {
   margin: 0 auto;
 }
 
@@ -128,6 +132,81 @@ body {
   font-size: 1.25rem;
 }
 
+/* main section styles  */
+.curriculum{
+  max-width: 1440px;
+  gap: 80px;
+}
+.curriculum .heading{
+  font-size: 2.87rem;
+  margin-top: 60px;
+}
+
+.curriculum .content .content-cards{
+  max-width: 1160px;
+  gap: 28px;
+}
+.content-cards .card{
+  max-width: 367px;
+  height: 467px;
+  gap: 33px;
+  border-radius: 18px;
+}
+.card h4{
+  font-size: 1.56rem;
+}
+.card p{
+  font-weight: 500;
+  line-height: 28px;
+}
+.card span{
+  font-weight: bold;
+}
+
+.card1{
+  box-shadow: 1px 1px 15px rgb(200, 230, 243);
+  background: linear-gradient(rgb(210, 234, 244), white);
+}
+.card2{
+  box-shadow: 1px 1px 15px rgb(237, 220, 188);
+  background: linear-gradient(rgb(249, 231, 204), white);
+}
+.card3{
+  box-shadow: 1px 1px 15px rgb(216, 193, 245);
+  background: linear-gradient( rgb(217, 195, 246), white);
+}
+.card1 span{
+  color: var(--third-color);
+}
+.card2 span{
+  color: var(--primary-color);
+}
+.card3 span{
+  color: var(--fourth-color);
+}
+
+
+.arrow-icon{
+  gap: 10px;
+  margin-bottom: 60px;
+}
+.arrow-icon .left,
+.arrow-icon .right{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+.arrow-icon i{
+  font-size: 1.5rem;
+  color: var(--secondery-color);
+}
+
+
+
 @media screen and (max-width: 576px) {
   .nav-list,
   .logo h2,
@@ -158,5 +237,21 @@ body {
   }
   .menu {
     display: block;
+  }
+  .content-cards{
+    flex-direction: column;
+  }
+  .curriculum{
+    gap: 20px;
+  }
+  .curriculum .heading{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .content-cards .card{
+    gap: 22px;
+  }
+  .arrow-icon{
+    display: none;
   }
 }
